@@ -6,8 +6,8 @@ context:
   items:
     - heading: "What Are the Different Types of Business Master’s Degrees?"
       content: "
-                This is a very long sentence
-                that spans several lines in the YAML."
+                This needs a line break \n
+                This needs a line break"
 
     - heading: "Take a look at the range of generalist and specialized master’s degree to suit your goals."
       content: "Are you still unsure whether you should pursue an MBA or a Master’s in Management?
