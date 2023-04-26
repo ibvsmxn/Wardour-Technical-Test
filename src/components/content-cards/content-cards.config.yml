@@ -1,6 +1,7 @@
 prefix: "content-cards"
 label: "Content cards"
 context:
+  mainTitle: "All about Business Masters"
   background_color: "bg-deep-grey"
   cta_label: "MiM vs MBA: What’s the Difference?"
   cta_button_link:

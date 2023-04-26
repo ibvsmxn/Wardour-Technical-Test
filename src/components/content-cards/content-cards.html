@@ -1,3 +1,4 @@
+{% set title_size = "text-28px md:text-36px" %}
 {% set text_size = "text-28px md:text-36px" %}
 {% if module.items|length == 2 %}
 {% set grid_cols = "sm:grid-cols-2" %}
@@ -10,6 +11,8 @@
 <!--<div class="bg-yellow bg-deep-grey"></div>-->
 <section class="{{ background_color }}">
     <div class="px-16 py-16 md:py-64 mx-auto max-w-100% space-y-16 flex flex-col items-center">
+
+        <h1 class="m-16 p-4 text-center font-poppins-bold {{ title_size }} {% if background_color == 'bg-deep-grey' %} text-white {% endif %}">{{ mainTitle }}</h1>
 
         <div class="w-full gap-16 justify-center space-y-16">
             {% for item in items %}

@@ -20,6 +20,10 @@
     transition: 0.3s all ease-in-out;
 }
 
+.accordion .accordion-content {
+    display: none;
+}
+
 .accordion .accordion-tab {
     text-align: left;
 }
