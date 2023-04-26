@@ -17,10 +17,10 @@
                 <div class="accordion-tab {% if module.background_color == '' %}border border-deep-grey{% endif %} bg-white text-center p-16 border-t-0 flex flex-row justify-between items-center grow">
                     <h2 class="font-poppins-bold {{ text_size }} js-load-hidden js-reveal">{{ item.heading }}</h2>
                     <a
-                            class="btn--outline w-fit"
-                            href="{{ item.url.href }}"
+                            class="toggler btn--outline w-fit"
+                            href="#"
                             role="button"
-                    >+</a>
+                    >×</a>
                 </div>
                 <div class="accordion-content bg-white px-16 py-16 pr-64">
                     <p class="font-poppins-regular">{{ item.content }}</p>

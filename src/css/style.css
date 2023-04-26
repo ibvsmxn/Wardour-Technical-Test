@@ -10,6 +10,43 @@
 
 @import "03-components/buttons.scss";
 
+.accordion {
+    max-width: 635px;
+    margin: 0 auto;
+}
+
+.accordion .accordion-tab,
 .accordion .accordion-content {
     transition: 0.3s all ease-in-out;
+}
+
+.accordion .accordion-tab {
+    text-align: left;
+}
+
+.accordion .accordion-tab a.toggler {
+    font-size: 2em;
+    padding: 20px 10px;
+    height: auto;
+    line-height: 0;
+    background-color: transparent;
+    transform: rotate(45deg);
+    transition: 0.3s all ease-in-out;
+}
+
+.accordion .accordion-tab:hover {
+    background: #e6e6e6;
+    transition: 0.3s all ease-in-out;
+}
+
+.accordion .accordion-tab.active {
+    color: white;
+    background: #46A1DC;
+    transition: 0.3s all ease-in-out;
+}
+
+.accordion .accordion-tab.active a.toggler {
+    transform: rotate(0deg);
+    color: white;
+    border-color: white;
 }

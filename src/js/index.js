@@ -11,13 +11,18 @@ for (i = 0; i < acc.length; i++) {
 
     /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
-    if (panel.style.height === "100%") {
-        panel.style.padding = "16px 64px 16px 16px";
+    if (panel.style.height === "auto") {
+        panel.style.padding = "16px";
+        panel.style.paddingRight = "64px";
+        panel.style.display = "block";
       panel.style.height = "0";
       panel.style.padding = "0";
+      panel.style.display = "none";
     } else {
-      panel.style.height = "100%";
-      panel.style.padding = "16px 64px 16px 16px";
+      panel.style.height = "auto";
+      panel.style.padding = "16px";
+      panel.style.paddingRight = "64px";
+      panel.style.display = "block";
     }
   });
 }

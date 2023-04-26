@@ -1,3 +1,31 @@
-{% set text_size = "text-28px md:text-36px" %}
-<h1 class="m-16 p-4 text-center font-poppins-bold {{ text_size }}">{{ mainTitle }}</h1>
-<br class="space-y-16">
+{% set title_size = "text-28px md:text-36px" %}
+{% set text_size = "text-16px md:text-16px" %}
+
+
+
+<h1 class="m-16 p-4 text-center font-poppins-bold {{ title_size }}">{{ mainTitle }}</h1>
+<br class="space-y-4">
+
+<section class="{{ background_color }}">
+    <div class="px-16 py-16 md:py-64 mx-auto max-w-100% space-y-16 flex flex-col items-center">
+
+        <div class="w-full gap-16 justify-center space-y-16">
+            {% for item in items %}
+            <article class="accordion col-span-1 js-load-hidden js-reveal {% if background_color == 'bg-white' %} border-[1px] {% endif %} flex flex-col justify-between">
+                <div class="accordion-tab {% if module.background_color == '' %}border border-deep-grey{% endif %} bg-white text-left p-16 border-t-0 flex flex-row justify-between items-center grow">
+                    <h2 class="font-poppins-bold {{ text_size }} js-load-hidden js-reveal">{{ item.heading }}</h2>
+                    <a
+                            class="toggler btn--outline w-fit"
+                            href="#"
+                            role="button"
+                    >×</a>
+                </div>
+                <div class="accordion-content bg-white px-16 py-16 pr-64">
+                    <p class="font-poppins-regular">{{ item.content }}</p>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
